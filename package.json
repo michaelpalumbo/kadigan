@@ -1,0 +1,20 @@
+{
+  "name": "kadigan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "speech2text.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node speech2text.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelpalumbo/kadigan.git"
+  },
+  "author": "michael palumbo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelpalumbo/kadigan/issues"
+  },
+  "homepage": "https://github.com/michaelpalumbo/kadigan#readme"
+}
