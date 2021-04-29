@@ -16,10 +16,10 @@ fs.writeFile(sessionFile, sessionName, (err) => {
   });
 
 function capture(){
-    console.log('speak for the next 5 seconds...')
+    // console.log('speak for the next 5 seconds...')
     PythonShell.run('speech2text.py', null, function (err, results) {
         // if (err) throw err;
-        console.log('Text:', results[1]);
+        console.log(newLine(results[1]));
         let text = '\n' + results[1]
         // add to the file
         fs.appendFile(sessionFile, text, (err) => {});
@@ -32,4 +32,17 @@ function capture(){
 
 console.log(`running speech2text. system will report text in intervals of 5 seconds`)
 capture()
+function newLine(str) {
+    if(!str){
+        // return undefined
+    }else {
+        var result = '';
+        while (str.length > 0) {
+          result += str.substring(0, 50) + '\n';
+          str = str.substring(50);
+        }
+        return result;
+    }
+
+  }
 
